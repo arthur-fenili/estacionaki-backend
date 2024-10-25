@@ -20,8 +20,6 @@ public class Motorista {
     @Column(name = "telefone")
     private String telefone;
 
-    @Column(name = "email")
-    private String email;
 
     @OneToMany(mappedBy = "motorista", cascade = CascadeType.ALL)
     private List<Carro> carros;
@@ -58,13 +56,6 @@ public class Motorista {
         this.telefone = telefone;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public List<Carro> getCarros() {
         return carros;

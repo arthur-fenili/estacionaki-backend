@@ -2,6 +2,8 @@ package com.example.estacionaki.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Estacionamento {
 
@@ -20,6 +22,17 @@ public class Estacionamento {
 
     @Column(name = "preco_hora")
     private double precoHora;
+
+    @OneToMany(mappedBy = "estacionamento", cascade = CascadeType.ALL)
+    private List<Carro> carrosEstacionados;
+
+    public List<Carro> getCarrosEstacionados() {
+        return carrosEstacionados;
+    }
+
+    public void setCarrosEstacionados(List<Carro> carrosEstacionados) {
+        this.carrosEstacionados = carrosEstacionados;
+    }
 
     public Long getId() {
         return id;

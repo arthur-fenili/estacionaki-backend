@@ -13,13 +13,13 @@ public class Carro {
     @Enumerated(EnumType.STRING)
     private TipoAutomovel tipo;
 
-    @Column(name = "plate")
+    @Column(name = "placa")
     private String placa;
 
-    @Column(name = "model")
+    @Column(name = "modelo")
     private String modelo;
 
-    @Column(name = "color")
+    @Column(name = "cor")
     private String cor;
 
     @Column(name = "ano")
@@ -34,9 +34,21 @@ public class Carro {
     @Column(name = "valor_pago")
     private double valorPago;
 
+    @Column(name = "tipo_automovel")
+    private TipoAutomovel tipoAutomovel;
+
+
     @ManyToOne
     @JoinColumn(name = "motorista_id")
     private Motorista motorista;
+
+    public TipoAutomovel getTipoAutomovel() {
+        return tipoAutomovel;
+    }
+
+    public void setTipoAutomovel(TipoAutomovel tipoAutomovel) {
+        this.tipoAutomovel = tipoAutomovel;
+    }
 
     public Date getHorarioEntrada() {
         return horarioEntrada;
