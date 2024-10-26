@@ -11,7 +11,7 @@ public record CarroResponse(
     String placa,
     String modelo,
     String cor,
-    String ano,
+    Integer ano,
     Date horarioEntrada,
     Date horarioSaida,
     Double valorPago,

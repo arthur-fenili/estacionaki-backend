@@ -15,8 +15,8 @@ public record EstacionamentoRequest(
         @NotBlank(message = "O número de vagas ocupadas é obrigatório")
         Integer vagasOcupadas,
 
-        @NotBlank(message = "O valor da hora é obrigatório")
-        Double valorHora,
+        @NotBlank(message = "O preco da hora é obrigatório")
+        Double precoHora,
 
         @NotBlank(message = "Os carros estacionados são obrigatórios")
         List<Carro> carrosEstacionados
